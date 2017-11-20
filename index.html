@@ -3,92 +3,34 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Yujie Wang's Personal Lab</title>
-    <style type="text/css">
-        body{
-            margin          : 0   ;
-            padding         : 0   ;
-            padding-top     : 70px;
-            background-color: #FFFFED;
-        }
-        img{
-            z-index: 1;
-        }
-        nav{
-            position        : fixed ;
-            top             : 0     ;
-            height          : 70px  ;
-            width           : 100%  ;
-            z-index         : 2     ;
-            background-color: #333  ;
-            margin          : 0     ;
-            overflow        : hidden;
-            text-align      : right ;
-        }
-        nav ul{
-            margin  : 0    ;
-            padding : 0    ;
-        }
-        nav ul li{
-            display        : inline-block;
-            list-style-type: none        ;
-        }
-        nav ul li a{
-            font-size      : 20px     ;
-            font-weight    : bold     ;
-            text-align     : center   ;
-            color          : white    ;
-            display        : block    ;
-            line-height    : 2em      ;
-            padding        : 15px 15px;
-            text-decoration: none     ;
-        }
-        nav ul li a:hover:not(.active){
-            background-color: #111    ;
-        }
-        .active{
-            background-color: #4CAF50 ;
-        }
-        .text{
-            border: none      ;
-            margin: 20px 120px;
-        }
-        .welcomeimage{
-            display  : inline-block;
-            position : relative;
-            width    : 100%    ;
-        }
-        .welcome{
-            position : absolute;
-            top      : 10%     ;
-            left     : 35%     ;
-            font-size: 25pt    ;
-            color    : black   ;
-        }
-    </style>
+    <link rel="stylesheet" href="./style/styles.css">
 </head>
 
 <body>
+
+    <!-- Navigation bar ---------------------------------------------------------------------------------------------->
     <nav>
         <ul>
-            <li><a class="active" href="index.html"> Home         </a></li>
-            <li><a                href="index.html"> News         </a></li>
-            <li><a                href="index.html"> People       </a></li>
-            <li><a                href="index.html"> Projects     </a></li>
-            <li><a                href="index.html"> Methods      </a></li>
-            <li><a                href="index.html"> Publications </a></li>
-            <li><a                href="index.html"> Links        </a></li>
-            <li><a                href="index.html"> About        </a></li>
+            <li><a class="active" href="./index.html"              > Home         </a></li>
+            <li><a                href="./source/test.html"        > News         </a></li>
+            <li><a                href="./source/test.html"        > People       </a></li>
+            <li><a                href="./source/test.html"        > Projects     </a></li>
+            <li><a                href="./source/test.html"        > Methods      </a></li>
+            <li><a                href="./source/publications.html"> Publications </a></li>
+            <li><a                href="./source/test.html"        > Links        </a></li>
+            <li><a                href="./source/test.html"        > About        </a></li>
         </ul>
     </nav>
     
+    <!-- Homepage welcome -------------------------------------------------------------------------------------------->
     <section class="welcomeimage">
         <img src="./image/homepage.jpg" width="100%">
         <div class="welcome">Welcome to Yujie's Personal Lab</div>
     </section>
     
-    <article class="text">
-        <font size="5">
-            <p> Terrestrial plants lose water inevitably in order to photosynthesize. Plants ought to evolve
+    <!-- Description ------------------------------------------------------------------------------------------------->
+    <article class="textmain">
+        <p> Terrestrial plants lose water inevitably in order to photosynthesize. Plants ought to evolve
             to obtain the maximal productivity at a given environment with limited resources, such as water
             and light. There must be an optimal water use strategy to acheive the maximized fitness. What is
             the optimal strategy? Do plants archeive the optimal strategy? The answers requires systematical
@@ -102,25 +44,35 @@
             conclusions, but it may not be valid. Comparitively, simply building models may result in right
             predictions, but it may not be true. Therefore, we can only believe in the results of obervations
             but not the conclusion, and we can only believe the power of the theories but not the assumptions.
-            Be a clever person!</p>
-            <p> The Yujie's Personal Lab focuses on part of the knowledge chain that ranges from vessel scale
+            Be a clever person!
+        </p>
+        <p> The Yujie's Personal Lab focuses on part of the knowledge chain that ranges from vessel scale
             to forest scale. The research are mainly on the Plant Water Relations, including experimental work
-            and theories. The ultimate goals are to resolve the following aspects:</p>
-            <ul>
-                <li>How plants transport water                                     </li>
-                <li>How plants use water efficiently                               </li>
-                <li>How to interpret plant evolution                               </li>
-                <li>How to model the plant water use                               </li>
-                <li>How should we increase the plant productivity                  </li>
-                <li>How to achieve the optimal equilibrium of human and environment</li>
-            </ul>
-            <p> Though experiments and theories are not directly coupled to Forestry and Agriculture, the power
+            and theories. The ultimate goals are to resolve the following aspects:
+        </p>
+        <ul>
+            <li>How plants transport water                                     </li>
+            <li>How plants use water efficiently                               </li>
+            <li>How to interpret plant evolution                               </li>
+            <li>How to model the plant water use                               </li>
+            <li>How should we increase the plant productivity                  </li>
+            <li>How to achieve the optimal equilibrium of human and environment</li>
+        </ul>
+        <p> Though experiments and theories are not directly coupled to Forestry and Agriculture, the power
             of theoretical tools are far more useful than empirical conclusions in the future. Yujie's Personal
             Lab would try to facilitate the applications of theories, such as instructions on conservation of
             forest and guidelines pn profit maximization of agriculture.
-            </p>
-        </font>
+        </p>
     </article>
+    
+    <!-- Footer ------------------------------------------------------------------------------------------------------>
+    <footer>
+        <ul>
+            <li>Contact</li>
+            <li><a href="mailto:wyujie@mail.ustc.edu.cn">Yujie Wang</a></li>
+            <li>Copyright &copy; Yujie Wang 2017</li>
+        <ul>
+    </footer>
 
 </body>
 

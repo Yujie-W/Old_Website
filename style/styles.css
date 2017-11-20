@@ -1,0 +1,96 @@
+body{
+    margin          : 0      ;
+    padding         : 0      ;
+    padding-top     : 70px   ;
+    background-color: #FFFFED;
+}
+footer{
+    position        : relative;
+    bottom          : 0       ;
+    height          : 100px   ;
+    width           : 100%    ;
+    display         : block   ;
+    background-color: #FFFFED ;
+    text-align      : center  ;
+}
+footer ul{
+    margin : 0;
+    padding: 0;
+}
+footer ul li{
+    display        : inline-block;
+    list-style-type: none        ;
+}
+footer ul li a{
+    font-size      : 16px     ;
+    text-align     : center   ;
+    color          : black    ;
+    display        : block    ;
+    line-height    : 2em      ;
+    padding        : 25px 15px;
+    text-decoration: none     ;
+}
+img{
+    z-index: 1;
+}
+nav{
+    position        : fixed ;
+    top             : 0     ;
+    height          : 70px  ;
+    width           : 100%  ;
+    z-index         : 2     ;
+    background-color: #333  ;
+    margin          : 0     ;
+    overflow        : hidden;
+    text-align      : right ;
+}
+nav ul{
+    margin  : 0;
+    padding : 0;
+}
+nav ul li{
+    display    : inline-block;
+    list-style-type: none    ;
+}
+nav ul li a{
+    font-size      : 20px     ;
+    font-weight    : bold     ;
+    text-align     : center   ;
+    color          : white    ;
+    display        : block    ;
+    line-height    : 2em      ;
+    padding        : 15px 15px;
+    text-decoration: none     ;
+}
+nav ul li a:hover:not(.active){
+    background-color: #111    ;
+}
+.active{
+    background-color: #4CAF50 ;
+}
+.textmain{
+    font-size: 24px      ;
+    border   : none      ;
+    margin   : 20px 120px;
+}
+.textpub{
+    font-size: 20px      ;
+    border   : none      ;
+    margin   : 20px 120px;
+}
+.ullapub{
+    margin: none;
+    padding: 10px;
+}
+.welcomeimage{
+    display  : inline-block;
+    position : relative    ;
+    width    : 100%        ;
+}
+.welcome{
+    position : absolute;
+    top      : 10%     ;
+    left     : 35%     ;
+    font-size: 25pt    ;
+    color    : black   ;
+}
