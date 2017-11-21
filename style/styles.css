@@ -7,11 +7,12 @@ body{
 footer{
     position        : relative;
     bottom          : 0       ;
-    height          : 100px   ;
+    height          : 200px   ;
     width           : 100%    ;
     display         : block   ;
     background-color: #FFFFED ;
     text-align      : center  ;
+    z-index         : 2       ;
 }
 footer ul{
     margin : 0;
@@ -27,7 +28,7 @@ footer ul li a{
     color          : black    ;
     display        : block    ;
     line-height    : 2em      ;
-    padding        : 25px 15px;
+    padding        : 80px 50px;
     text-decoration: none     ;
 }
 img{
@@ -68,6 +69,18 @@ nav ul li a:hover:not(.active){
 .active{
     background-color: #4CAF50 ;
 }
+.photo{
+    border       : 1px solid #DDD;
+    border-radius: 4px           ;
+    padding      : 5px           ;
+    width        : 200px         ;
+    float        : left          ;
+}
+.photoframe{
+    overflow: auto;
+    margin  : 0   ;
+    font-size: 20px      ;
+}
 .textmain{
     font-size: 24px      ;
     border   : none      ;
@@ -78,7 +91,7 @@ nav ul li a:hover:not(.active){
     border   : none      ;
     margin   : 20px 120px;
 }
-.ullapub{
+.ullipub{
     margin: none;
     padding: 10px;
 }
