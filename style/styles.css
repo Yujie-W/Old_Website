@@ -39,7 +39,7 @@ nav{
     top             : 0     ;
     height          : 70px  ;
     width           : 100%  ;
-    z-index         : 2     ;
+    z-index         : 3     ;
     background-color: #333  ;
     margin          : 0     ;
     overflow        : hidden;
@@ -66,9 +66,30 @@ nav ul li a{
 nav ul li a:hover:not(.active){
     background-color: #111    ;
 }
+
 .active{
     background-color: #4CAF50 ;
 }
+
+.gallery{
+    margin: 5px           ;
+    border: 1px solid #CCC;
+    float : left          ;
+    width : 180px         ;
+    height: 240px         ;
+}
+.gallery:hover{
+    border: 1px solid #777;
+}
+.gallery img{
+    height: auto;
+    width : 100%;
+}
+.gallerycaption{
+    padding   : 15px  ;
+    text-align: center;
+}
+
 .photo{
     border       : 1px solid #DDD;
     border-radius: 4px           ;
@@ -81,6 +102,42 @@ nav ul li a:hover:not(.active){
     margin  : 0   ;
     font-size: 20px      ;
 }
+
+.sidepanel{
+    position        : fixed ;
+    top             : 70px  ;
+    height          : 100%  ;
+    width           : 250px ;
+    z-index         : 3     ;
+    background-color: #333  ;
+    margin          : 0     ;
+    padding         : 0     ;
+    overflow        : hidden;
+    text-align      : center;
+    font-size       : 20px  ;
+    color           : white ;
+}
+.sidepanelulli{
+    margin         : 0           ;
+    padding        : 0           ;
+    display        : inline-block;
+    list-style-type: none        ;
+    font-size      : 20px        ;
+    text-align     : center      ;
+    color          : white       ;
+    text-decoration: none        ;
+    width          : 250px       ;
+}
+.sidepanelulli li a{
+    color          : white   ;
+    display        : block   ;
+    padding        : 5px 16px;
+    text-decoration: none    ;
+}
+.sidepanelulli li a:hover{
+    background-color: #111;
+}
+
 .textmain{
     font-size: 24px      ;
     border   : none      ;
@@ -95,15 +152,16 @@ nav ul li a:hover:not(.active){
     margin: none;
     padding: 10px;
 }
-.welcomeimage{
-    display  : inline-block;
-    position : relative    ;
-    width    : 100%        ;
-}
+
 .welcome{
     position : absolute;
     top      : 10%     ;
     left     : 35%     ;
     font-size: 25pt    ;
     color    : black   ;
+}
+.welcomeimage{
+    display  : inline-block;
+    position : relative    ;
+    width    : 100%        ;
 }
