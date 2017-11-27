@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Yujie Wang's Blog -- Latex</title>
+    <link rel="stylesheet" href="../../style/styles.css">
+</head>
+
+<body>
+    <!-- Navigation bar ---------------------------------------------------------------------------------------------->
+    <nav>
+        <ul>
+            <li><a                href="../../index.html"      > Home         </a></li>
+            <li><a class="active" href="../blog.html"          > Blog         </a></li>
+            <li><a                href="../people.html"        > People       </a></li>
+            <li><a                href="../projects.html"      > Projects     </a></li>
+            <li><a                href="../methods.html"       > Methods      </a></li>
+            <li><a                href="../publications.html"  > Publications </a></li>
+            <li><a                href="../links.html"         > Links        </a></li>
+            <li><a                href="../about.html"         > About        </a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main text --------------------------------------------------------------------------------------------------->
+    <article class="textmain">
+        <h1>How to add bibiography to each chapter</h1>
+        <h3>PdfLatex + ChapterBib                 </h3>
+        <p> PdfLatex is my default Latex compiler. It is easy to include bibiography into the main.tex file and compile
+            it with pdflatex. It would be a little tricky if you need to use individual bibiography in each chapter of
+            your book, such as thesis. To make it easier to organize, you can put each chapter in an individual file,
+            e.g. "./chapter/chapter-1.tex".</p>
+        <p> In your "main.tex", you should use the package chapterbib by adding this line:</p>
+        <code>
+            \usepackage[sectionbib]{chapterbib}
+        </code>
+        <p> The "chapterbib" is the package you want to use, and the "sectionbib" is the option that makes your
+            bibiography a section in the chapter. Then add the following lines in you "chapter-1.tex":</p>
+        <code>
+            \includebibiography{Your_Bib_File}<br>
+            \bibliographystyle{apalike}
+        </code>
+        <p> For the file name of Your_Bib_File, please leave the ".bib" part, e.g. "bibio" but not "bibio.bib". The
+            bibiographystyle can be "apalike", "plain", and etc. Details can be found online.</p>
+        
+        <h3>How to compile                        </h3>
+        <p> To compile it successfully, you should do as the following (command under Linux):</p>
+        <code>
+            pdflatex main.tex<br>
+            bibtex ./chapter/chapter-1<br>
+            pdflatex main.tex<br>
+            pdflatex main.tex
+        </code>
+        <p> The first line is to generate the .aux file for each chapter; the second line is to generate the citation
+            in the given chapter; the last two lines are to generate the final PDF file with right citations. Please
+            not that should can't add ".tex" in the second line because .aux is what bibtex works on.</p>
+    </article>
+
+</body>
+
+</html>
