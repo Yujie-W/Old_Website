@@ -25,14 +25,14 @@
     <article class="textmain">
         <h1>How to add bibliography to each chapter</h1>
         
-        <hr style="height: 4px; background-color: grey;">
         <h3>PdfLatex + ChapterBib                 </h3>
+        <hr>
         <p> PdfLatex is my default Latex compiler. It is easy to include bibliography into the main.tex file and compile
             it with pdflatex. It would be a little tricky if you need to use individual bibliography in each chapter of
             your book, such as thesis. To make it easier to organize, you can put each chapter in an individual file,
             e.g. "./chapter/chapter-1.tex".</p>
         <p> In your "main.tex", you should use the package chapterbib by adding this line:</p>
-        <div style="margin-left: 50px;">
+        <div class="textcode">
             <code>
                 \usepackage[sectionbib]{chapterbib}<br>
                 \usepackage[sectionbib]{natbib}
@@ -41,7 +41,7 @@
         <p> The "chapterbib" is the package you want to use, and the "sectionbib" is the option that makes your
             bibliography a section in the chapter. The "natbib" package ensure that the citation parentheses is the
             the default (). Then add the following lines in you "chapter-1.tex":</p>
-        <div style="margin-left: 50px;">
+        <div class="textcode">
             <code>
                 \includebibliography{Your_Bib_File}<br>
                 \bibliographystyle{apalike}
@@ -50,20 +50,25 @@
         <p> For the file name of Your_Bib_File, please leave the ".bib" part, e.g. "biblio" but not "biblio.bib". The
             bibliographystyle can be "apalike", "plain", and etc. Details can be found online.</p>
         
-        <hr style="height: 2px; background-color: grey;">
         <h3>How to compile                        </h3>
-        <p> To compile it successfully, you should do as the following (command under Linux):</p>
-        <div style="margin-left: 50px;">
+        <hr>
+        <p> To compile it successfully, you should do as the following make.sh file (command under Linux):</p>
+        <div class="textcode">
             <code>
-                pdflatex main.tex<br>
-                bibtex ./chapter/chapter-1<br>
-                pdflatex main.tex<br>
-                pdflatex main.tex
+                pdflatex main.tex;<br>
+                sleep 1;<br>
+                bibtex ./chapter/chapter-1;<br>
+                sleep 1;<br>
+                pdflatex main.tex;<br>
+                sleep 1;<br>
+                pdflatex main.tex;
             </code>
         </div>
         <p> The first line is to generate the .aux file for each chapter; the second line is to generate the citation
             in the given chapter; the last two lines are to generate the final PDF file with right citations. Please
-            not that should can't add ".tex" in the second line because .aux is what bibtex works on.</p>
+            not that should can't add ".tex" in the second line because .aux is what bibtex works on. You need to let
+            the file be generated before running the next command, so the "sleep 1" makes the computer sleep for a
+            second for the files to be generated.</p>
     </article>
 
 </body>
