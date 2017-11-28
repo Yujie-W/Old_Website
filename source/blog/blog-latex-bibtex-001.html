@@ -21,12 +21,12 @@
         </ul>
     </nav>
     
-    <!-- Main text --------------------------------------------------------------------------------------------------->
+    <!-- Main text ------------------------------------------------------------------------------------------------ -->
     <article class="textmain">
-        <h1>How to add bibiography to each chapter</h1>
+        <h1>How to add bibliography to each chapter</h1>
         <h3>PdfLatex + ChapterBib                 </h3>
-        <p> PdfLatex is my default Latex compiler. It is easy to include bibiography into the main.tex file and compile
-            it with pdflatex. It would be a little tricky if you need to use individual bibiography in each chapter of
+        <p> PdfLatex is my default Latex compiler. It is easy to include bibliography into the main.tex file and compile
+            it with pdflatex. It would be a little tricky if you need to use individual bibliography in each chapter of
             your book, such as thesis. To make it easier to organize, you can put each chapter in an individual file,
             e.g. "./chapter/chapter-1.tex".</p>
         <p> In your "main.tex", you should use the package chapterbib by adding this line:</p>
@@ -35,14 +35,14 @@
             \usepackage[sectionbib]{natbib}
         </code>
         <p> The "chapterbib" is the package you want to use, and the "sectionbib" is the option that makes your
-            bibiography a section in the chapter. The "natbib" package ensure that the citation parenthese is the
+            bibliography a section in the chapter. The "natbib" package ensure that the citation parentheses is the
             the default (). Then add the following lines in you "chapter-1.tex":</p>
         <code>
-            \includebibiography{Your_Bib_File}<br>
+            \includebibliography{Your_Bib_File}<br>
             \bibliographystyle{apalike}
         </code>
-        <p> For the file name of Your_Bib_File, please leave the ".bib" part, e.g. "bibio" but not "bibio.bib". The
-            bibiographystyle can be "apalike", "plain", and etc. Details can be found online.</p>
+        <p> For the file name of Your_Bib_File, please leave the ".bib" part, e.g. "biblio" but not "biblio.bib". The
+            bibliographystyle can be "apalike", "plain", and etc. Details can be found online.</p>
         
         <h3>How to compile                        </h3>
         <p> To compile it successfully, you should do as the following (command under Linux):</p>
