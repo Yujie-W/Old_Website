@@ -50,14 +50,73 @@
         
         <h3>Widely used R-square comparison</h3>
         <hr>
+        <p> I have read many papers about testing the gas exchange models and compaing them. The most seen method is to
+            compare the R-square of the models. If the R-square of one fitting is higher than the other, then the model
+            is better than the other. Such comaprison make sense if people are comparing two linear regression, as one
+            may argue that one fitting is more colose to its own linear regression. However, R-square makes no sense if
+            one is trying to make 1:1 comparisons. Use the below figure as an example, the blue dots have a higher
+            R-square linear regression than the red dots, but the red dots are more close to the 1:1 line. How should
+            we compare the fittings?</p>
+        <div align="center">
+            <img src="../../image/fittings.png", alt="Rain Forest">
+        </div>
+        <p> The R-square of the blue dots linear regression is obviously higher than that of the red dots, and the
+            slope of the red dots is obviously closer to 1. The two data sets have the same standard (comparison). How
+            should we do? It depends on what we want to compare.</p>
+            
         
         <h3>Yujie's comments</h3>
         <hr>
+        <p> If our aim is to compare how accurate can we make predictions, then we should compare the standardized
+            error. The algorithm is like:</p>
+        <div class="textcode">
+            <code>
+                sum_square = sum ( (y_obs-y_std)^2 )<br>
+                std_error = sqrt( sum_squre/n_obs )
+            </code>
+        </div>
+        <p> We can tell that if we just compare the data in the region [5,15], the blue dots performs much better than
+            the red dots. Otherwise, in the region (0,5) and (15:20), the red dots perform better than the blue dots.
+            Overall speaking, the red dots perform alight better than the blue dots. One may argue that if we extend
+            the red dots and blue dots to unknown region, the red dots would behave way better than the blue dots. I
+            can only say, it is possible because we don't know what the observations are like if you did not measure or
+            predict it. In a word, the comparison is only valid for such data sets and in such region, and we can not
+            make anay further statement out of the known data sets.</p>
+        <p> If our aim is to compare the relative accuracy rather than the absolute value, we must adjust our algorithm
+            otherwise we are in trouble. We may define the relative standardized error as:</p>
+        <div class="textcode">
+            <code>
+                sum_relative_square = sum( (y_obs/y_std-1)^2 )<br>
+                std_relative_error = sqrt( sum_relative_square/n_obs )
+            </code>
+        </div>
+        <p> The standardized error or relative standardized error can be used if one is comparing the models that fit
+            the same standard dataset. It would be a problem if one is comparing two different data sets. For example,
+            what if the standard error of two data sets are the same while one data set ranges from 0 to 25 and the
+            other data set ranges from 1 to 50?</p>
+        <p> We may argue that the relative standardized error of the second data set is lower so it would be a better
+            model. However, the relative standardized error is not what we care about, we care about the standardized
+            error. In this case, we have to consider the range of the data set or the standard deviation of the
+            standard data set. We can use the below algorithm:</p>
+        <div class="textcode">
+            <code>
+                sum_square = sum ( (y_obs-y_std)^2 )<br>
+                std_error = sqrt( sum_squre/n_obs )<br>
+                std_fitting = std_error / sd_obs
+            </code>
+        </div>
+        <p> Inputting the data set coverage as part of standard fitting comparison gives us a better view of how well
+            the model behave in different range. If the model bahaves well under the given range, we can not garantee
+            that the model is equally behaved out of the range, so we have to reduce our confidence no matter how
+            confident we are just because we don't have any proof.</p>
         <p> The quality of a model depends on the prediction power, i.e. the ability to make predictions close to
-            experimental observations. Thus, the quality depends on the following aspects:</p>
+            experimental observations. Thus, the quality depends on the following aspects, and readers should choose
+            the right standard for their data sets. Technically, I recommand use all of the three, i.e. the
+            std_fitting parameter I have defined above. The fitting quality standards are:</p>
         <ul>
             <li>the distance from the predicted means to experimental means;</li>
-            <li>the mean variation from the predictions to observations.    </li>
+            <li>the mean variation from the predictions to observations;    </li>
+            <li>the golden standard data range.                             </li>
         </ul>
     </article>
 
