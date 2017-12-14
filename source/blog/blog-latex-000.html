@@ -29,6 +29,24 @@
         <h3>Basic packages</h3>
         <hr>
         
+        <h4>Equations</h4>
+        <div class="textcode">
+            <code>
+                % in the header<br>
+                \usepackage{amsmath}<br>
+                \usepackage{txfonts}<br>
+                <br>
+                % in the text<br>
+                \begin{align}<br>
+                ... ...<br>
+                \end{align}
+            </code>
+        </div>
+        <p> The amsmath package allows you to list the equations in multiple line, and you may use the align*
+            environment to remove the equation labels. For the one-line equation, you may use the equation environment.
+            More details can be found in a later blog (if any). You may include the txfonts package to sue the times
+            font for the equations.</p>
+        
         <h4>Framed Text</h4>
         <div class="textcode">
             <code>
@@ -42,6 +60,16 @@
             </code>
         </div>
         <p> This helps you outline the important part or independent part.</p>
+        
+        <h4>Geometry</h4>
+        <div class="textcode">
+            <code>
+                % in the header<br>
+                \usepackage{geometry}<br>
+                \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+            </code>
+        </div>
+        <p> This allows you to define the margins. It is easy to customize the margins with above code.</p>
         
         <h4>Graphics</h4>
         <div class="textcode">
@@ -63,6 +91,15 @@
         <p> This command allows you to insert figures in Latex. The figure environment allows graphics to be shown with
             label and caption. You can use "\ref{}" to make reference to the labels you added.</p>
         
+        <h4>Hyphenate</h4>
+        <div class="textcode">
+            <code>
+                % in the header<br>
+                \usepackage[none]{hyphenat}
+            </code>
+        </div>
+        <p> If you don't want the hyphenate in the document, you may use the hyphenat package with the option "none".</p>
+        
         <h4>Listing</h4>
         <div class="textcode">
             <code>
@@ -81,6 +118,42 @@
         
         <h3>Basic templates</h3>
         <hr>
+        <p> Use the following templates for different documents.</p>
+        
+        <h4>Scientific article</h4>
+        <div class="textcode">
+            <code>
+                \documentclass[12pt, a4paper]{article}<br>
+                <br>
+                \usepackage{amsmath}<br>
+                \usepackage{geometry}<br>
+                \usepackage{graphicx}<br>
+                \usepackage[none]{hyphenat}<br>
+                \usepackage{indentfirst}<br>
+                \usepackage{lineno}<br>
+                \usepackage[sectionbib]{natbib}<br>
+                \usepackage{ragged2e}<br>
+                \usepackage{times}<br>
+                \usepackage{titlesec}<br>
+                \usepackage{txfonts} % times font for math<br>
+                \geometry{top=2.5cm, bottom=2.5cm, left=3.5cm, right=2.5cm}<br>
+                \linenumbers<br>
+                \linespread{1.5}<br>
+                \setlength{\parindent}{2em}<br>
+                \setlength\RaggedRightParindent{2em}<br>
+                \titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}<br>
+                \titleformat{\subsection}{\normalfont\fontsize{12}{15} \itshape}{\thesection}{1em}{}<br>
+                % avoid overfull \hbox<br>
+                \hbadness=10000<br>
+                \tolerance=10000<br>
+                <br>
+                % main text<br>
+                \begin{document}<br>
+                \RaggedRight<br>
+                ... ...<br>
+                \end{document}
+            </code>
+        </div>
     </article>
 
 </body>
