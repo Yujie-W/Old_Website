@@ -4,10 +4,10 @@
 body{
 	position        : fixed   ;
 	margin          : 0       ;
-	padding-top     : 70px    ;
-	padding-bottom  : 50px    ;
-	padding-left    : 50px    ;
-	padding-right   : 50px    ;
+	padding-top     : 0px     ;
+	padding-bottom  : 0px     ;
+	padding-left    : 0px     ;
+	padding-right   : 0px     ;
 	background-color: #FFFFED ;
 }
 
@@ -39,12 +39,12 @@ footer{
 }
 
 .title{
-	position    : fixed ;
-	top         : 50px  ;
-	padding     : 8%    ;
-	text-aligh  : left  ;
-	font-size   : 3.2em ;
-	font-weight : 500%  ;
+	position    : fixed  ;
+	top         : 50px   ;
+	padding     : 8%     ;
+	text-align  : center ;
+	font-size   : 3.2em  ;
+	font-weight : 500%   ;
 }
 
 .author{
@@ -52,7 +52,7 @@ footer{
 	bottom     : 10%   ;
 	right      : 15%   ;
 	padding    : 10%   ;
-	text-aligh : left  ;
+	text-align : left  ;
 	font-size  : 1.5em ;
 }
 
@@ -60,7 +60,7 @@ footer{
 	position    : fixed ;
 	top         : 50px  ;
 	padding     : 2%    ;
-	text-aligh  : left  ;
+	text-align  : left  ;
 	font-size   : 2.8em ;
 	font-weight : 500%  ;
 }
@@ -69,6 +69,15 @@ footer{
 	position    : fixed ;
 	top         : 100px ;
 	padding     : 5%    ;
-	text-aligh  : left  ;
+	text-align  : left  ;
+	font-size   : 1.8em ;
+}
+
+.figure{
+	position    : fixed ;
+	top         : 0px   ;
+	left        : 450px ;
+	padding     : 5%    ;
+	text-align  : left  ;
 	font-size   : 1.8em ;
 }

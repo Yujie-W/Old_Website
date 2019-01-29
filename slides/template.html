@@ -3,37 +3,64 @@
 <head>
 <meta charset="utf-8">
 <title>HTML Title Here</title>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <link rel="stylesheet" href="../style/styles-slide.css"/>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900'  >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 
-<body>
+<body onload="startTime()">
 	<!-- This is header -->
 	<header>
-		This is header!
+		<a class="w3-button w3-left"><i class="fa fa-home"></i></a>
+		<a class="w3-button w3-left">&laquo;</a>
+		<a class="w3-button w3-left">&raquo;</a>
 	</header>
-	
+
 	<!-- This is the main text -->
 	<div class="title">
 		This is the title...
 	</div>
-	
+
 	<div class="author">
 		<p>Author here...</p>
 		<p>Insititution here...</p>
 	</div>
-	
+
 	<div class="stitle">
 		This is the slide title...
 	</div>
-	
+
 	<div class="smain">
 		This is the slide main text...
+		<p>Date/Time: <span id="txt"></span></p>
 	</div>
-	
+
 	<!-- This is footer -->
 	<footer>
 		&ndash;&ndash;&ndash; Page \(-e^\mathrm{\pi i}\) &ndash;&ndash;&ndash;
 	</footer>
+
+	<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+	</script>
 </body>
 </html>
