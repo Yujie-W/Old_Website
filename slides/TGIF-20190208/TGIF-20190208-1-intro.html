@@ -19,29 +19,25 @@
 		<a class="w3-button w3-left" href="./TGIF-20190208-0-home.html" ><i class="fa fa-home"></i></a>
 		<a class="w3-button w3-left" href="./TGIF-20190208-0-home.html" >&laquo;                   </a>
 		<a class="w3-button w3-left" href="./TGIF-20190208-2-model.html">&raquo;                   </a>
+		<a class="w3-button w3-left"                                    >Typical leaf anatomy      </a>
 	</header>
-
+	
 	<!-- This is the main text -->
-	<div class="stitle">
-		Typical leaf anatomy
+	<div class="scontainer">
+		<img class="sfigure" src="./figures/c3-amphi.png" >
+		<img class="sfigure" src="./figures/c4-amphi.png" >
+		<img class="sfigure" src="./figures/cam-hyper.png">
+		<img class="sfigure" src="./figures/c3-hypo.png"  >
 	</div>
 
-	<div class="smain">
-		<ul style="font-size:1em; list-style-type: none;">
-			<li><button class="w3-button demo" style="width:350px;" onclick="currentDiv(1)">C3 Amphistomatous </button></li>
-			<li><button class="w3-button demo" style="width:350px;" onclick="currentDiv(2)">C4 Amphistomatous </button></li>
-			<li><button class="w3-button demo" style="width:350px;" onclick="currentDiv(3)">CAM Hyperstomatous</button></li>
-			<li><button class="w3-button demo" style="width:350px;" onclick="currentDiv(4)">C3 Hypostomatous  </button></li>
-		</ul>
-
-		<div class="figure" style="height:80%;width:70%">
-		  <img class="mySlides" src="./figures/c3-amphi.png"  style="width:100%">
-		  <img class="mySlides" src="./figures/c4-amphi.png"  style="width:100%">
-		  <img class="mySlides" src="./figures/cam-hyper.png" style="width:100%">
-		  <img class="mySlides" src="./figures/c3-hypo.png"   style="width:100%">
-		</div>
+	<!-- This is the navigation panel -->
+	<div class="snavi">
+		<a class="w3-button demo" onclick="currentDiv(1)">C3 Amphistomatous </a>
+		<a class="w3-button demo" onclick="currentDiv(2)">C4 Amphistomatous </a>
+		<a class="w3-button demo" onclick="currentDiv(3)">CAM Hyperstomatous</a>
+		<a class="w3-button demo" onclick="currentDiv(4)">C3 Hypostomatous  </a>
 	</div>
-
+	
 	<!-- This is footer -->
 	<footer>
 		&ndash;&ndash;&ndash; Page \( \mathrm{ sin^{2}x + cos^{2}x } \) &ndash;&ndash;&ndash;
@@ -58,7 +54,7 @@
 
 	function showDivs(n) {
 	  var i;
-	  var x = document.getElementsByClassName("mySlides");
+	  var x = document.getElementsByClassName("sfigure");
 	  var dots = document.getElementsByClassName("demo");
 	  if (n > x.length) {slideIndex = 1}
 	  if (n < 1) {slideIndex = x.length}
