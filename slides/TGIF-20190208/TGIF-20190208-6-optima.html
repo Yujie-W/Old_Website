@@ -3,10 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>TGIF 2019-02-08 Optima</title>
-<link rel="stylesheet" href="../../style/styles-slide.css"/>
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="css/demo.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="../../style/styles-slide.css"/>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900"  >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,18 +11,18 @@
 </head>
 
 <body>
+	<!-- background -->
+	<div class="sbackground" style="background-image:url('../../image/uofu_medallion_black.svg')"></div>
+
 	<!-- This is header -->
 	<header>
 		<a class="w3-button w3-left" href="./TGIF-20190208-0-home.html"  ><i class="fa fa-home"></i></a>
-		<a class="w3-button w3-left" href="./TGIF-20190208-4-alloc.html" >&laquo;                   </a>
-		<a class="w3-button w3-left" href="./TGIF-20190208-x-thanks.html">&raquo;                   </a>
+		<a class="w3-button w3-left" href="./TGIF-20190208-5-alloc.html" >&laquo;                   </a>
+		<a class="w3-button w3-left" href="./TGIF-20190208-7-conclu.html">&raquo;                   </a>
+		<a class="w3-button w3-left"                                     >Optimal allocation        </a>
 	</header>
 
 	<!-- This is the main text -->
-	<div class="stitle">
-		Optimal allocation
-	</div>
-	
 	<div class="snavi">
 		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(1)">A<sub>net</sub></a>
 		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(2)">Nitrogen Price </a>
@@ -33,18 +30,16 @@
 		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(4)">3D Map         </a>
 	</div>
 
-	<div class="smain">
-		<div class="figure" style="max-height:85vh;width:75vw">
-		  <img class="mySlides" src="./figures/rub-anet.svg"       style="width:100%">
-		  <img class="mySlides" src="./figures/rub-n-price.svg"    style="width:100%">
-		  <img class="mySlides" src="./figures/rub-leaf-price.svg" style="width:100%">
-		  <img class="mySlides" src="./figures/3d alloc.svg"       style="width:100%">
-		</div>
+	<div class="scontainer">
+		<img class="sfigure" src="./figures/rub-anet.svg"      >
+	  	<img class="sfigure" src="./figures/rub-n-price.svg"   >
+	  	<img class="sfigure" src="./figures/rub-leaf-price.svg">
+	  	<img class="sfigure" src="./figures/3d alloc.svg"      >
 	</div>
 
 	<!-- This is footer -->
 	<footer>
-		&ndash;&ndash;&ndash; Page \( \sqrt{13^{2}-12^{2}} \) &ndash;&ndash;&ndash;
+		&ndash;&ndash;&ndash; Page \( e^{1.19176} \) &ndash;&ndash;&ndash;
 	</footer>
 
 	<!-- This is script for buttons -->
@@ -58,7 +53,7 @@
 
 	function showDivs(n) {
 	  var i;
-	  var x = document.getElementsByClassName("mySlides");
+	  var x = document.getElementsByClassName("sfigure");
 	  var dots = document.getElementsByClassName("demo");
 	  if (n > x.length) {slideIndex = 1}
 	  if (n < 1) {slideIndex = x.length}

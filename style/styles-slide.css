@@ -3,6 +3,7 @@
 
 body{
 	position        : fixed   ;
+	top             : 0       ;
 	width           : 100vw   ;
 	height          : 100vh   ;
 	margin          : 0       ;
@@ -10,7 +11,8 @@ body{
 	padding-bottom  : 0px     ;
 	padding-left    : 0px     ;
 	padding-right   : 0px     ;
-	background-color: #FFFFED ;
+	background-color: #AAAAAA ;
+	z-index: 1;
 }
 
 header{
@@ -26,10 +28,6 @@ header{
 	z-index      : 10    ;
 }
 
-main{
-	font-size : 1.6em ;
-}
-
 footer{
 	position       : fixed ;
 	bottom         : 0px   ;
@@ -39,12 +37,22 @@ footer{
 	padding-bottom : 5px   ;
 	text-align     : right ;
 	font-size      : 16px  ;
+	z-index        : 10    ;
 }
 
 img {
   display      : block;
   margin-left  : auto ;
   margin-right : auto ;
+}
+
+.sbackground{
+  	background-repeat: no-repeat ;
+	background-size  : cover     ;
+	overflow         : hidden    ;
+	height           : 100vh     ;
+	opacity          : 0.01      ;
+	z-index          : 4         ;
 }
 
 .snavi{
@@ -76,21 +84,28 @@ img {
 }
 
 .smain{
-	position    : fixed ;
-	top         : 100px ;
-	padding     : 5%    ;
-	text-align  : left  ;
-	font-size   : 1.8em ;
+	position       : fixed ;
+	top            : 100px ;
+	padding-top    : 50px  ;
+	padding-left   : 100px ;
+	padding-right  : 50px  ;
+	padding-bottom : 50px  ;
+	text-align     : left  ;
+	font-size      : 40px  ;
+	z-index        : 2     ;
 }
 
 .scontainer{
+	top        : 0      ;
 	position   : fixed  ;
 	height     : 100vh  ;
 	width      : 100vw  ;
 	text-align : center ;
+	z-index    : 3      ;
 }
 
 .sfigure{
+	top            : 0      ;
 	text-align     : center ;
 	padding-top    : 72px   ;
 	padding-left   : 45px   ;
@@ -99,4 +114,14 @@ img {
 	height         : 100%   ;
 	max-width      : 100%   ;
 	display        : block  ;
+	z-index        : 4      ;
+}
+
+.ssticker{
+	position   : fixed  ;
+	text-align : center ;
+	height     : 15%    ;
+	max-width  : 25%    ;
+	display    : block  ;
+	z-index    : 4      ;
 }
