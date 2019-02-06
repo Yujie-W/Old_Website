@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Why?</title>
+<link rel="stylesheet" type="text/css" href="../../style/styles-slide.css"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900"  />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+<body onload="startTime()">
+	<!-- background -->
+	<div class="sbackground" style="background-image:url('../../image/uofu_medallion_black.svg')"></div>
+
+	<!-- This is header -->
+	<header>
+		<a class="w3-button w3-left" href="./TGIF-20190208-0.html"><i class="fa fa-home"></i></a>
+		<a class="w3-button w3-left"                              >&laquo;</a>
+		<a class="w3-button w3-left"                              >&raquo;</a>
+		<a class="w3-button w3-left"                              >Background</a>
+	</header>
+
+	<!-- This is the main text -->
+	<div class="snavi">
+		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(1)">Tree mortality         </a>
+	  <a class="w3-button demo" style="width:auto;" onclick="currentDiv(2)">Gas exchange model     </a>
+		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(3)">Drought response       </a>
+		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(4)">CO<sub>2</sub> response</a>
+		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(5)">META Analysis          </a>
+		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(6)">Carbon allocation      </a>
+		<a class="w3-button demo" style="width:auto;" onclick="currentDiv(7)">Improvements required  </a>
+	</div>
+
+	<div class="scontainer">
+		<img class="sfigure" src="./figures/tree_mortality.svg"   />
+		<img class="sfigure" src="./figures/sperry_model.svg"     />
+		<img class="sfigure" src="./figures/venturas_drought.svg" />
+	  <img class="sfigure" src="./figures/wang_comparison.svg"  />
+		<img class="sfigure" src="./figures/anderegg_model.svg"   />
+		<img class="sfigure" src="./figures/trugman_mortality.svg"/>
+	  <div class="sfigure" style="text-align:left; padding-top:150px; padding-left:200px; font-size:40px;">
+	    <li style="margin:40px 0;"> (Tree-level) Acclimation of leaf area;                </li>
+	    <li style="margin:40px 0;"> (Leaf-level) Acclimation of photosynthetic capability;</li>
+	    <li style="margin:80px 0;"> How to maximize profit?                               </li>
+	  </div>
+	</div>
+
+	<!-- This is footer -->
+	<footer>
+		Page \(-e^\mathrm{\pi i}\) &nbsp; &nbsp; &nbsp; &nbsp;<span id="txt"></span>
+	</footer>
+
+	<!-- This is the script -->
+	<script>
+		function startTime() {
+			var today = new Date();
+			var h = today.getHours();
+			var m = today.getMinutes();
+			var s = today.getSeconds();
+			m = checkTime(m);
+			s = checkTime(s);
+			document.getElementById('txt').innerHTML =
+			h + ":" + m + ":" + s;
+			var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+			return i;
+		}
+
+	// script for buttons
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("sfigure");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " w3-red";
+	}
+	</script>
+</body>
+</html>

@@ -51,7 +51,7 @@ img {
 	background-size  : cover     ;
 	overflow         : hidden    ;
 	height           : 100vh     ;
-	opacity          : 0.01      ;
+	opacity          : 0.015     ;
 	z-index          : 4         ;
 }
 
