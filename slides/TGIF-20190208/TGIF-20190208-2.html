@@ -8,6 +8,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css"/>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="js/clock.js"></script>
+<script type="text/javascript" src="js/navi.js"></script>
 </head>
 
 <body onload="startTime()">
@@ -43,44 +45,15 @@
 
     <!-- This is the script -->
     <script>
-        function startTime() {
-            var today = new Date();
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('txt').innerHTML =
-            h + ":" + m + ":" + s;
-            var t = setTimeout(startTime, 500);
-        }
-        function checkTime(i) {
-            if (i < 10){i = "0" + i};  // add zero in front of numbers < 10
-            return i;
-        }
-
-        // script for buttons
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("sfigure");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+        // This the navigation function
+        document.onkeyup = function(event) {
+            var x = event.which || event.keyCode;
+            if (x==37 || x==38) {
+                window.open("./TGIF-20190208-1.html", "_top");
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" w3-red", "");
+            else if (x==39 || x==40) {
+                window.open("./TGIF-20190208-3.html", "_top");
             }
-            x[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " w3-red";
         }
     </script>
 </body>
