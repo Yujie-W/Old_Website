@@ -13,51 +13,48 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
 
-<body onload="startTime()">
-	<!-- background -->
-    <img class="ssticker" style="top:0;left:0;height:100%;max-width:100%;opacity:0.02;z-index:3;"
-         src="../../image/uofu_medallion_black.svg"/>
-
+<body>
+	<canvas width="100vw" height="100vh" id="container" style="position:relative"></canvas>
 	<!-- This is header -->
 	<header>
 		<a class="w3-button w3-left" href="./TGIF-20190208-0.html"><i class="fa fa-home"></i></a>
-		<a class="w3-button w3-left" href="./TGIF-20190208-6.html">&#171;                    </a>
+		<a class="w3-button w3-left" href="./TGIF-20190208-7.html">&#171;                    </a>
 		<a class="w3-button w3-left" href="./TGIF-20190208-8.html">&#187;                    </a>
-		<a class="w3-button w3-left"                              >Optimal investment?       </a>
+		<a class="w3-button w3-left"                              >Acknowledgments           </a>
 	</header>
 
-	<!-- This is the main text -->
-    <div class="snavi">
-        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(1)">Nonlinear V<sub>cmax</sub> cost</a>
-        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(2)">Linear V<sub>cmax</sub> cost   </a>
-    </div>
-
-	<div class="scontainer">
-		<img class="sfigure" src="./figures/3d_optimization_nl.svg"/>
-		<img class="sfigure" src="./figures/3d_optimization_li.svg"/>
+	<div class="smain" style="text-align:left">
+		<p>Sperry Lab</p>
+		<ul>
+			<li>John Sperry</li>
+			<li>Martin Venturas</li>
+		</ul>
 	</div>
 
-	<!-- This is footer -->
-	<footer>
-		<span id="txt"></span>
-	</footer>
+	<!-- stickers -->
+	<div>
+		<img class="ssticker" style="top:0;left:0;height:100%;max-width:100%;   opacity:0.2;"
+			 src="../../image/uofu_medallion_black.svg"/>
+		<img class="ssticker" style="bottom:25%;left:5%;transform:rotate(-5deg);opacity:0.5;"
+			 src="../../image/julia.svg"               />
+		<img class="ssticker" style="bottom:5% ;left:5%;transform:rotate(-5deg);opacity:0.9;"
+		     src="../../image/python.svg"            />
+		<img class="ssticker" style="bottom:80px;right:5%;height:30%;           opacity:0.8;"
+		     src="../../image/nsf.svg"               />
+	</div>
 
-    <!-- This is the script -->
-    <script>
-        // script for buttons
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
+	<!-- This is the script -->
+	<script>
         // This the navigation function
-        document.onkeyup = function(event) {
+        document.onkeydown = function(event) {
             var x = event.which || event.keyCode;
             if (x==37 || x==38) {
                 window.open("./TGIF-20190208-6.html", "_top");
             }
             else if (x==39 || x==40) {
-                window.open("./TGIF-20190208-8.html", "_top");
+                window.open("./TGIF-20190208-x.html", "_top");
             }
         }
-    </script>
+	</script>
 </body>
 </html>

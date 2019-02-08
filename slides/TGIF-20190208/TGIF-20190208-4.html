@@ -23,7 +23,6 @@
 		<a class="w3-button w3-left" href="./TGIF-20190208-0.html"><i class="fa fa-home"></i></a>
 		<a class="w3-button w3-left" href="./TGIF-20190208-3.html">&#171;                    </a>
 		<a class="w3-button w3-left" href="./TGIF-20190208-5.html">&#187;                    </a>
-		<a class="w3-button w3-left"                              >Stack of chloroplasts     </a>
 	</header>
 
 	<!-- This is the main text -->
@@ -41,7 +40,7 @@
     <!-- This is the script -->
     <script>
         // This the navigation function
-        document.onkeyup = function(event) {
+        document.onkeydown = function(event) {
             var x = event.which || event.keyCode;
             if (x==37 || x==38) {
                 window.open("./TGIF-20190208-3.html", "_top");

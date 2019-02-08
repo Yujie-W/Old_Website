@@ -21,17 +21,24 @@
 	<!-- This is header -->
 	<header>
 		<a class="w3-button w3-left" href="./TGIF-20190208-0.html"><i class="fa fa-home"></i></a>
-		<a class="w3-button w3-left" href="./TGIF-20190208-5.html">&#171;                    </a>
-		<a class="w3-button w3-left" href="./TGIF-20190208-7.html">&#187;                    </a>
-		<a class="w3-button w3-left"                              >Conclusion                </a>
+		<a class="w3-button w3-left" href="./TGIF-20190208-6.html">&#171;                    </a>
+		<a class="w3-button w3-left" href="./TGIF-20190208-8.html">&#187;                    </a>
+		<a class="w3-button w3-left"                              >Optimal investment        </a>
 	</header>
 
 	<!-- This is the main text -->
-	<div class="smain" style="text-align:left">
-		<ul>
-            <li style="margin:40px 0;">There is limit to photosynthetic capacity;                   </li>
-            <li style="margin:40px 0;">Nutrient needed for V<sub>cmax</sub> increases exponentially;</li>
-		</ul>
+    <div class="snavi">
+        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(1)">Linear V<sub>cmax</sub> cost    </a>
+        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(2)">Nonlinear V<sub>cmax</sub> cost </a>
+        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(3)">Comparison                      </a>
+        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(4)">Example: Elevated CO<sub>2</sub></a>
+        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(5)">Example: Nitrogen Price         </a>
+    </div>
+
+	<div class="scontainer">
+		<img class="sfigure" src="./figures/3d_optimization_li.svg"/>
+		<img class="sfigure" src="./figures/3d_optimization_nl.svg"/>
+		<img class="sfigure" src="./figures/3d_optimization_ln.svg"/>
 	</div>
 
 	<!-- This is footer -->
@@ -41,14 +48,18 @@
 
     <!-- This is the script -->
     <script>
+        // script for buttons
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
         // This the navigation function
-        document.onkeyup = function(event) {
+        document.onkeydown = function(event) {
             var x = event.which || event.keyCode;
             if (x==37 || x==38) {
                 window.open("./TGIF-20190208-5.html", "_top");
             }
             else if (x==39 || x==40) {
-                window.open("./TGIF-20190208-7.html", "_top");
+                window.open("./TGIF-20190208-x.html", "_top");
             }
         }
     </script>

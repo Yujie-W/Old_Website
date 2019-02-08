@@ -23,27 +23,20 @@
         <a class="w3-button w3-left" href="./TGIF-20190208-0.html"><i class="fa fa-home"></i></a>
         <a class="w3-button w3-left" href="./TGIF-20190208-2.html">&#171;                    </a>
         <a class="w3-button w3-left" href="./TGIF-20190208-4.html">&#187;                    </a>
-        <a class="w3-button w3-left"                              >Leaf anatomy              </a>
     </header>
 
     <!-- This is the main text -->
     <div class="snavi">
-        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(1)">3D View     </a>
+        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(1)">Leaf anatomy</a>
         <a class="w3-button demo" style="width:auto;" onclick="currentDiv(2)">Self-shading</a>
         <a class="w3-button demo" style="width:auto;" onclick="currentDiv(3)">Model       </a>
-        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(4)">Definition  </a>
-        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(5)">Code        </a>
+        <a class="w3-button demo" style="width:auto;" onclick="currentDiv(4)">Code        </a>
     </div>
 
     <div class="scontainer">
         <img class="sfigure" src="../../image/leaf.svg"      />
         <img class="sfigure" src="./figures/self_shading.svg"/>
-        <img class="sfigure" src="./figures/model_1d.svg"    />
-		<div class="sfigure" style="text-align:left; padding-top:150px; padding-left:200px; font-size:40px;">
-		    <li style="margin:40px 0;"> 1 PS Unit =<br/>
-                1.00 umol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup> V<sub>cmax</sub><br/>
-                1.75 umol CO<sub>2</sub> m<sup>-2</sup> s<sup>-1</sup> J<sub>max</sub>;</li>
-		</div>
+        <img class="sfigure" src="./figures/model_2d.svg"    />
         <img class="sfigure" src="./figures/screenshot.png"  />
     </div>
 
@@ -59,7 +52,7 @@
         showDivs(slideIndex);
 
         // This the navigation function
-        document.onkeyup = function(event) {
+        document.onkeydown = function(event) {
             var x = event.which || event.keyCode;
             if (x==37 || x==38) {
                 window.open("./TGIF-20190208-2.html", "_top");

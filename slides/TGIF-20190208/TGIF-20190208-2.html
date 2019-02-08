@@ -23,7 +23,6 @@
         <a class="w3-button w3-left" href="./TGIF-20190208-0.html"><i class="fa fa-home"></i></a>
         <a class="w3-button w3-left" href="./TGIF-20190208-1.html">&#171;                    </a>
         <a class="w3-button w3-left" href="./TGIF-20190208-3.html">&#187;                    </a>
-        <a class="w3-button w3-left"                              >Optimization              </a>
     </header>
 
     <!-- This is the main text -->
@@ -46,8 +45,12 @@
 
     <!-- This is the script -->
     <script>
+        // script for slideIndex
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
         // This the navigation function
-        document.onkeyup = function(event) {
+        document.onkeydown = function(event) {
             var x = event.which || event.keyCode;
             if (x==37 || x==38) {
                 window.open("./TGIF-20190208-1.html", "_top");
