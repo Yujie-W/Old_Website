@@ -8,4 +8,4 @@ The Yujie Lab focuses on the Plant Water Relations, including experimental work 
 - How should we increase the plant productivity;
 - How to achieve the optimal equilibrium of human and environment.
 
-Please visit [Yujie's Personal Lab](https://yujiewanglab.github.io/) for the web view.
+Please visit [Yujie's Private Lab](https://yujiewanglab.github.io/) for the web view.
