@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="279mm"
+   height="90mm"
+   viewBox="0 0 279 90"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="keras.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.1901508"
+     inkscape:cx="527.24409"
+     inkscape:cy="170.07874"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     height="70mm"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-207)">
+    <g
+       id="g875">
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect828"
+         d="M 6.2658507,212.26801 H 87.188566 v 79.68451 H 6.2658507 Z"
+         style="fill:#c80000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:0.49999999, 0.49999999;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="text833"
+         style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         aria-label="K" />
+      <text
+         id="text860"
+         y="275.2175"
+         x="94.592598"
+         style="font-style:normal;font-weight:normal;font-size:64.15143585px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.33412206"
+         xml:space="preserve"><tspan
+           style="font-size:64.15143585px;stroke-width:0.33412206"
+           y="275.2175"
+           x="94.592598"
+           id="tspan858"
+           sodipodi:role="line">Keras</tspan></text>
+      <text
+         id="text864"
+         y="275.21356"
+         x="23.116034"
+         style="font-style:normal;font-weight:normal;font-size:64.16848755px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.33421084;"
+         xml:space="preserve"><tspan
+           style="font-size:64.16848755px;stroke-width:0.33421084;fill:#ffffff;"
+           y="275.21356"
+           x="23.116034"
+           id="tspan862"
+           sodipodi:role="line">K</tspan></text>
+    </g>
+  </g>
+</svg>
