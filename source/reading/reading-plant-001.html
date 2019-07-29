@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Yujie Wang's Private Lab</title>
+    <link rel="stylesheet" href="../../style/styles.css">
+    <link rel="icon" href="../../image/icons/chip_tree.svg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../image/icons/chip_tree.svg" type="image/x-icon"/>
+</head>
+
+<body>
+    <!-- Navigation bar ---------------------------------------------------------------------------------------------->
+    <nav>
+        <ul>
+            <li><a                href="../../index.html"      > Home         </a></li>
+            <li><a class="active" href="../blog.html"          > Blog         </a></li>
+            <li><a                href="../people.html"        > People       </a></li>
+            <li><a                href="../projects.html"      > Projects     </a></li>
+            <li><a                href="../methods.html"       > Methods      </a></li>
+            <li><a                href="../publications.html"  > Publications </a></li>
+            <li><a                href="../links.html"         > Links        </a></li>
+            <li><a                href="../about.html"         > About        </a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main text ------------------------------------------------------------------------------------------------ -->
+    <article class="textmain">
+        <h1 align="center">Wang et al. (2015) from Plant Physiology</h1>
+        <h2 align="center">Studies on the tempo of bubble formation in recently cavitated vessels: a model to predict the pressure of air bubbles</h2>
+        <p  align="center">Commented by Yujie Wang @ 2019-07-29</p>
+        
+        <h3>Findings</h3>
+        <hr>
+        <p> 本文主要探讨了在气穴化发生以后发生了什么。首先，气穴化因离心机产生的负压发生之初，导管立马充满了气体，这时气全部都是水蒸气。然后溶解在枝条内水中的空气会扩散到气穴化的导管之内，使得气体压强增大，理论上讲气穴化程度越高最终的压强就越低。最后气体会在导管里逐渐积累，到达一个平衡（这个在下一个文章里）。</p>
+        <p> 这时，如果停止离心机转动，枝条导管的负压会升高变得不那么负。当压强超过一定的阈值时，水会回流到导管里，且压强越高，水回流的比例就越高。部分充满水的导管会连接导水的导管，因此导水率会临时升高。理论上来讲可以通过这种导水率的临时恢复来反推气泡压强大小。</p>
+        <p> 本文的确通过实验验证了理论的猜测，即气泡压强低于一个大气压，并反推演了Sperry Rotor下的PLC。</p>
+
+        <h3>Pitfalls</h3>
+        <hr>
+        <p> 本文是基于模型预测来反推Sperry Rotor下的PLC，因此在这个PLC的预测不准确，且没有经过验证。而本文的模型也有很大的漏洞，包括（1）假设PLC是均匀分布的，（2）假设导管是完美的随机分布，即所有导管互相连接；虽然这么假设无伤大雅，但是使得Sperry PLC的预测很不准确。还有一点就是木质部的扩散系数取值不对，这一点在下一篇文章中就行了修复。</p>
+    </article>
+
+</body>
+
+</html>
