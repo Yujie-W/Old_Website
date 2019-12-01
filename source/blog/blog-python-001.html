@@ -33,13 +33,13 @@
         <p> The easiest way to use python on Windows is to use Anaconda, which sets up python for you. To install a new package, what you need to do is just type "conda install packagename" in command line. Therefore, you can simply type "conda install basemap" and install Basemap package.</p>
         <p> To use Basemap, you need to import it in the premeable, e.g., "from mpl_toolkits.basemap import Basemap". However, you cannot use Basemap directly because windows does not set up the package for you. What you need to do is add "PROJ_LIB" to the environmental variables. Follow the steps:</p>
         <ul>
-            <li>Right click "This PC" (or equivalent names such as "Computer") and select "Properties"</li>
-            <li>Click "Advanced system settings" on the left, and you will see a "System Properties" dialog</li>
-            <li>Click "Environment Variables..." and you will see another dialog "Environment Variables"</li>
+            <li>Right click "This PC" (or equivalent names such as "Computer") and select "Properties"                                                 </li>
+            <li>Click "Advanced system settings" on the left, and you will see a "System Properties" dialog                                            </li>
+            <li>Click "Environment Variables..." and you will see another dialog "Environment Variables"                                               </li>
             <li>Below the upper table "User variables for username", there is a button "New...", click it and you will see a dialog "New User Variable"</li>
-            <li>Type "PROJ_LIB" in the upper line text editor</li>
-            <li>Type the installation folder, e.g., "C:\Users\yujie\Miniconda3\Library\share" in my case</li>
-            <li>Save the changes and reload Python. Then basemap works~</li>
+            <li>Type "PROJ_LIB" in the upper line text editor                                                                                          </li>
+            <li>Type the installation folder, e.g., "C:\Users\yujie\Miniconda3\Library\share" in my case                                               </li>
+            <li>Save the changes and reload Python. Then basemap works~                                                                                </li>
         </ul>
         <p> Think linux has the same problem with environment variable, I forgot how I fixed that. It should be something like to add a new line in .bashrc file, and the line is something like "export PROJ_LIB=/path/to/your/instalation/of/anaconda/share/proj/".</p>
         <p> Updates on 1029-11-19. I tried to install basemap on debian 10. The command is "apt install python3-mpl_toolkits.basemap", and after that you can use it directly without any setup. However, the command provided for .bashrc should for those who install python with Anaconda.</p>
