@@ -42,7 +42,10 @@
             <li>Save the changes and reload Python. Then basemap works~                                                                                </li>
         </ul>
         <p> Think linux has the same problem with environment variable, I forgot how I fixed that. It should be something like to add a new line in .bashrc file, and the line is something like "export PROJ_LIB=/path/to/your/instalation/of/anaconda/share/proj/".</p>
-        <p> Updates on 1029-11-19. I tried to install basemap on debian 10. The command is "apt install python3-mpl_toolkits.basemap", and after that you can use it directly without any setup. However, the command provided for .bashrc should for those who install python with Anaconda.</p>
+        <hr>
+        <p> Updates on 2019-11-19. I tried to install basemap on debian 10. The command is "apt install python3-mpl_toolkits.basemap", and after that you can use it directly without any setup. However, the command provided for .bashrc should for those who install python with Anaconda.</p>
+        <hr>
+        <p> Updates on 2020-01-14. I encountered another problem with the basemap when I installed it again this year. The error message was associated with "epsg" file. After doing some research on it, I downloaded the epsg file from the basemap git and put it in the PROJ_LIB folder. Then the problem was solved.</p>
     </article>
 
 </body>
