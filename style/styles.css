@@ -100,6 +100,25 @@ th, td {
     text-align: center;
 }
 
+.gallery_paper{
+    margin: 5px           ;
+    border: 1px solid #CCC;
+    float : left          ;
+    width : 180px         ;
+    height: 180px         ;
+}
+.gallery_paper:hover{
+    border: 1px solid #777;
+}
+.gallery_paper img{
+    height: auto;
+    width : 100%;
+}
+.gallerycaption_paper{
+    padding   : 15px  ;
+    text-align: center;
+}
+
 .photo{
     border       : 1px solid #DDD;
     border-radius: 4px           ;
