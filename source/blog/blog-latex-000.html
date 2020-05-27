@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Yujie Wang's Private Lab</title>
-    <link rel="stylesheet" href="../../style/styles.css">
+    <link rel="stylesheet" href="../../style/styles.css"/>
     <link rel="icon" href="../../image/icons/chip_tree.svg" type="image/x-icon"/>
     <link rel="shortcut icon" href="../../image/icons/chip_tree.svg" type="image/x-icon"/>
 </head>
 
 <body>
-    <!-- Navigation bar ------------------------------------------------------------------------------------------- -->
+    <!-- Navigation bar -->
     <nav>
         <ul>
             <li><a                href="../../index.html"      > Home         </a></li>
@@ -23,24 +23,24 @@
         </ul>
     </nav>
     
-    <!-- Main text ------------------------------------------------------------------------------------------------ -->
+    <!-- Main text -->
     <article class="textmain">
         <h1 align="center">Basic Latex packages and templates</h1>
         <p  align="center">Yujie Wang, 2017-11-27</p>
         
         <h3>Basic packages</h3>
-        <hr>
+        <hr/>
         
         <h4>Equations</h4>
         <div class="textcode">
             <code>
-                % in the header<br>
-                \usepackage{amsmath}<br>
-                \usepackage{txfonts}<br>
-                <br>
-                % in the text<br>
-                \begin{align}<br>
-                ... ...<br>
+                % in the header<br/>
+                \usepackage{amsmath}<br/>
+                \usepackage{txfonts}<br/>
+                <br/>
+                % in the text<br/>
+                \begin{align}<br/>
+                ... ...<br/>
                 \end{align}
             </code>
         </div>
@@ -52,12 +52,12 @@
         <h4>Framed Text</h4>
         <div class="textcode">
             <code>
-                % in the header<br>
-                \usepackage{framed}<br>
-                <br>
-                % in the text<br>
-                \begin{framed}<br>
-                ... ...<br>
+                % in the header<br/>
+                \usepackage{framed}<br/>
+                <br/>
+                % in the text<br/>
+                \begin{framed}<br/>
+                ... ...<br/>
                 \end{framed}
             </code>
         </div>
@@ -66,8 +66,8 @@
         <h4>Geometry</h4>
         <div class="textcode">
             <code>
-                % in the header<br>
-                \usepackage{geometry}<br>
+                % in the header<br/>
+                \usepackage{geometry}<br/>
                 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
             </code>
         </div>
@@ -76,17 +76,17 @@
         <h4>Graphics</h4>
         <div class="textcode">
             <code>
-                % in the header<br>
-                \usepackage{graphicx}<br>
-                <br>
-                % in the text<br>
-                \begin{figure}[htbp]<br>
-                \includegraphics[width=0.8\textwidth]{figure_name}<br>
-                \caption{This is the caption.}<br>
-                \label{figure_label}<br>
-                \end{figure}<br>
-                <br>
-                % to ref this figure<br>
+                % in the header<br/>
+                \usepackage{graphicx}<br/>
+                <br/>
+                % in the text<br/>
+                \begin{figure}[htbp]<br/>
+                \includegraphics[width=0.8\textwidth]{figure_name}<br/>
+                \caption{This is the caption.}<br/>
+                \label{figure_label}<br/>
+                \end{figure}<br/>
+                <br/>
+                % to ref this figure<br/>
                 Details can be found in \ref{figure_label}.
             </code>
         </div>
@@ -96,7 +96,7 @@
         <h4>Hyphenate</h4>
         <div class="textcode">
             <code>
-                % in the header<br>
+                % in the header<br/>
                 \usepackage[none]{hyphenat}
             </code>
         </div>
@@ -105,13 +105,13 @@
         <h4>Listing</h4>
         <div class="textcode">
             <code>
-                % in the header<br>
-                \usepackage{listing}<br>
-                <br>
-                % in the text<br>
-                \lstset{language=C, caption={}, basicstyle=\ttfamily\small}<br>
-                \begin{lstlisting}<br>
-                ... ...<br>
+                % in the header<br/>
+                \usepackage{listing}<br/>
+                <br/>
+                % in the text<br/>
+                \lstset{language=C, caption={}, basicstyle=\ttfamily\small}<br/>
+                \begin{lstlisting}<br/>
+                ... ...<br/>
                 \end{lstlisting}
             </code>
         </div>
@@ -119,40 +119,40 @@
             file. You may use different settings to set up the environment, such as font size and language type.</p>
         
         <h3>Basic templates</h3>
-        <hr>
+        <hr/>
         <p> Use the following templates for different documents.</p>
         
         <h4>Scientific article</h4>
         <div class="textcode">
             <code>
-                \documentclass[12pt, a4paper]{article}<br>
-                <br>
-                \usepackage{amsmath}<br>
-                \usepackage{geometry}<br>
-                \usepackage{graphicx}<br>
-                \usepackage[none]{hyphenat}<br>
-                \usepackage{indentfirst}<br>
-                \usepackage{lineno}<br>
-                \usepackage[sectionbib]{natbib}<br>
-                \usepackage{ragged2e}<br>
-                \usepackage{times}<br>
-                \usepackage{titlesec}<br>
-                \usepackage{txfonts} % times font for math<br>
-                \geometry{top=2.5cm, bottom=2.5cm, left=3.5cm, right=2.5cm}<br>
-                \linenumbers<br>
-                \linespread{1.5}<br>
-                \setlength{\parindent}{2em}<br>
-                \setlength\RaggedRightParindent{2em}<br>
-                \titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}<br>
-                \titleformat{\subsection}{\normalfont\fontsize{12}{15} \itshape}{\thesection}{1em}{}<br>
-                % avoid overfull \hbox<br>
-                \hbadness=10000<br>
-                \tolerance=10000<br>
-                <br>
-                % main text<br>
-                \begin{document}<br>
-                \RaggedRight<br>
-                ... ...<br>
+                \documentclass[12pt, a4paper]{article}<br/>
+                <br/>
+                \usepackage{amsmath}<br/>
+                \usepackage{geometry}<br/>
+                \usepackage{graphicx}<br/>
+                \usepackage[none]{hyphenat}<br/>
+                \usepackage{indentfirst}<br/>
+                \usepackage{lineno}<br/>
+                \usepackage[sectionbib]{natbib}<br/>
+                \usepackage{ragged2e}<br/>
+                \usepackage{times}<br/>
+                \usepackage{titlesec}<br/>
+                \usepackage{txfonts} % times font for math<br/>
+                \geometry{top=2.5cm, bottom=2.5cm, left=3.5cm, right=2.5cm}<br/>
+                \linenumbers<br/>
+                \linespread{1.5}<br/>
+                \setlength{\parindent}{2em}<br/>
+                \setlength\RaggedRightParindent{2em}<br/>
+                \titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}<br/>
+                \titleformat{\subsection}{\normalfont\fontsize{12}{15} \itshape}{\thesection}{1em}{}<br/>
+                % avoid overfull \hbox<br/>
+                \hbadness=10000<br/>
+                \tolerance=10000<br/>
+                <br/>
+                % main text<br/>
+                \begin{document}<br/>
+                \RaggedRight<br/>
+                ... ...<br/>
                 \end{document}
             </code>
         </div>

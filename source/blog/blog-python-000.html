@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Yujie Wang's Private Lab</title>
-    <link rel="stylesheet" href="../../style/styles.css">
+    <link rel="stylesheet" href="../../style/styles.css"/>
     <link rel="icon" href="../../image/icons/chip_tree.svg" type="image/x-icon"/>
     <link rel="shortcut icon" href="../../image/icons/chip_tree.svg" type="image/x-icon"/>
 </head>
 
 <body>
-    <!-- Navigation bar ---------------------------------------------------------------------------------------------->
+    <!-- Navigation bar -->
     <nav>
         <ul>
             <li><a                href="../../index.html"      > Home         </a></li>
@@ -23,13 +23,13 @@
         </ul>
     </nav>
     
-    <!-- Main text ------------------------------------------------------------------------------------------------ -->
+    <!-- Main text -->
     <article class="textmain">
         <h1 align="center">Use Python for multiple threading computations</h1>
         <p  align="center">Yujie Wang, 2017-12-14</p>
         
         <h3>Pool and ThreadPool</h3>
-        <hr>
+        <hr/>
         <p> There are many ways to do multi-threading computations. The easiest way is to run the program in different
             environment, for example run the code in multiple terminals. The disadvantage of doing this way is that one
             has to sit in front of the computer and start the next running, and this is not efficient or smart. Or one
@@ -42,36 +42,36 @@
             easiest, i.e. Pool and ThreadPool. See the below codes for details about ThredPool.</p>
         <div class="textcode">
             <code>
-                # import the modules<br>
-                from multiprocessing.dummy import Pool as ThreadPool<br>
-                <br>
-                # in the thread function<br>
-                def thread_func(item):<br>
-                ....do_something(item)<br>
-                ....return result<br>
-                <br>
-                # in any function<br>
-                def func():<br>
-                ....list_item = [item0, item1, ..., itemn]<br>
-                ....pool = ThreadPool(n)<br>
+                # import the modules<br/>
+                from multiprocessing.dummy import Pool as ThreadPool<br/>
+                <br/>
+                # in the thread function<br/>
+                def thread_func(item):<br/>
+                ....do_something(item)<br/>
+                ....return result<br/>
+                <br/>
+                # in any function<br/>
+                def func():<br/>
+                ....list_item = [item0, item1, ..., itemn]<br/>
+                ....pool = ThreadPool(n)<br/>
                 ....results = pool.map(function_thread, list_item)
             </code>
         </div>
         <p> The other way is to use Pool, see the code below</p>
         <div class="textcode">
             <code>
-                # import the modules<br>
-                from multiprocessing import Pool<br>
-                <br>
-                # in the thread function<br>
-                def thread_func(item):<br>
-                ....do_something(item)<br>
-                ....return result<br>
-                <br>
-                # in any function<br>
-                def func():<br>
-                ....list_item = [item0, item1, ..., itemn]<br>
-                ....pool = Pool(n)<br>
+                # import the modules<br/>
+                from multiprocessing import Pool<br/>
+                <br/>
+                # in the thread function<br/>
+                def thread_func(item):<br/>
+                ....do_something(item)<br/>
+                ....return result<br/>
+                <br/>
+                # in any function<br/>
+                def func():<br/>
+                ....list_item = [item0, item1, ..., itemn]<br/>
+                ....pool = Pool(n)<br/>
                 ....results = pool.map(function_thread, list_item)
             </code>
         </div>
